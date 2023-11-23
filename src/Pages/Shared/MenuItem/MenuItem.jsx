@@ -11,7 +11,9 @@ const MenuItem = ({menus}) => {
             <p className="text-sm text-center">{recipe}</p>
             <p className="text-center font-bold text-xl">${price}</p>
             </div>
+           
            </div>
+          
         </div>
     );
 };

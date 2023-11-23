@@ -4,7 +4,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { useEffect, useState } from "react";
-
+import ReactStars from "react-rating-stars-component";
 const Testimonials = () => {
     const [review, setreview]= useState([])
     useEffect(()=>{
@@ -20,6 +20,12 @@ const Testimonials = () => {
        {
         review.map((reviews)=> <SwiperSlide key={reviews._id}>
             <div className="m-24">
+            <ReactStars
+    count={reviews.rating}
+    size={30}
+    color="#FACC15"
+    classNames="mx-auto"
+  />
                 <p>{reviews.details}</p>
                 <h1 className="text-3xl text-center text-yellow-400">{reviews.name}</h1>
             </div>
